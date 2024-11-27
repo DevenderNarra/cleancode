@@ -12,8 +12,6 @@ class Car:
     def get_current_speed(self):
         return self.current_speed
 
-    def start(self):
-        self.current_speed += self.acceleration
 
     def start_engine(self):
         self.is_engine_started = True

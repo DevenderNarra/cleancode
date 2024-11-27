@@ -27,8 +27,8 @@ class RaceCar:
     def accelerate(self):
         if self.is_engine_started:
             self.current_speed += self.acceleration
-        if self.nitro >= 10:
-            # Use nitro
+        is_nitro_available=self.nitro >= 10
+        if is_nitro_available:
             extra_speed = math.ceil(0.3 * self.acceleration)
             self.current_speed += extra_speed
             self.nitro -= 10
