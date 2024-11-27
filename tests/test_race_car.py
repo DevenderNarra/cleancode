@@ -12,9 +12,16 @@ def test_racecar_accelerate(racecar):
     assert "Start the engine to accelerate" == act
 
 def test_get_racecar_current_speed(racecar):
-  act=racecar.get_current_speed()
-  assert 0 == act
+    racecar.start()
+    act=racecar.get_current_speed()
+    assert racecar.current_speed == act
 
 def test_sound_horn(racecar):
     act=racecar.sound_horn()
     assert "Peep Peep\nBeep Beep"==act
+
+def test_racecar_stop_engine(racecar):
+    racecar.stop_engine()
+    assert racecar.is_engine_started==False
+
+

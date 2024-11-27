@@ -14,3 +14,4 @@ def test_truck_unload(truck):
 def test_truck_sound_horn(truck):
     check=truck.sound_horn()
     assert check=="Honk Honk"
+
